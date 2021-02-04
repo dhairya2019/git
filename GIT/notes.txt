@@ -1,0 +1,58 @@
+Git
+VCS(Version Control System) is one feature of Git
+It is a tool created by Linus Torwalds who is also the creator of Linux Kernel
+
+It is used as a SCM(SOurce Code Management Tool) in the industries for maintaing 
+and managing business source code
+
+
+Architecture
+
+Git architecture is composed of three components
+Workspace: termed as local or server system in which we write code and create files
+Staging Area: Does not contains actual data but behind the scenes keep track
+of the modified, deleted , updated and added data using the tracker 
+Commit Area: The main area where the backup or we can more clearly say snapshot 
+is taken which only consists of delta which is the only data which is maodified
+and refernce to the previous commit is stored.
+
+The whole concept of snapshot come around to save the memory utilization
+The same concept is used by AWS in snapshots
+
+The marker is given to the data in staging area for different modifications
+like update,delete,added pr modified and indexes them so that it can be commited 
+accordingly
+
+
+Now coming to actual commands
+
+1. git init: You need to execute this command in order to create a repository which
+consists of hiddene staging and commit area in order for the git to function
+
+2. git add file_nam: This command is used to make the untracked file inside the 
+workspace as tracked which means it comes into staging area
+
+3. git commit -m "Your_mesage" file_name: This command is used to take the snapshot of 
+the file so that we create  backup of it .
+
+4.git status: For checking the status of tracked and untracked file you can use
+this command
+
+5. git log: to check the log of the commited file which contains the head pointer
+to the current commit. A unique large encoded code to the different commits
+with their timestamp with the message that we passed during commiting
+
+6. git reflog: to get a shorter version of the log command you can use this
+
+7. git reset commit_id: this command is used to change the position of head pointer
+to the commit of which we have passed commit id
+
+8. git checkout file_name: To change the file to the previous commit we have to 
+execute this command after the git reset command in order to change the content of
+VCS.
+
+9.git config --global user.email "email": To configure the email id for account 
+identity
+
+10. git config --global user.name "username": To configure the username for 
+account identity
